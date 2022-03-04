@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="String"
+            />
+        <variable
+            name="year"
+            type="String"
+            />
+        <variable
+            name="make"
+            type="String"
+            />
+        <variable
+            name="state"
+            type="String"
+            />
+        <variable
+            name="city"
+            type="String"
+            />
+        <variable
+            name="mileage"
+            type="String"
+            />
+        <variable
+            name="trim"
+            type="String"
+            />
+        <variable
+            name="price"
+            type="String"
+            />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_character"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{year}"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvPrice"
+            app:layout_constraintEnd_toStartOf="@id/tvMake"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_character"
+            tools:text="Character" />
+
+        <TextView
+            android:id="@+id/tvMake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{make}"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvPrice"
+            app:layout_constraintEnd_toStartOf="@id/tvModel"
+            app:layout_constraintStart_toEndOf="@id/tvYear"
+            app:layout_constraintTop_toBottomOf="@+id/img_character"
+            tools:text="Character" />
+
+        <TextView
+            android:id="@+id/tvModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model}"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvPrice"
+            app:layout_constraintEnd_toStartOf="@id/tvTrim"
+            app:layout_constraintStart_toEndOf="@id/tvMake"
+            app:layout_constraintTop_toBottomOf="@+id/img_character"
+            tools:text="Character" />
+
+        <TextView
+            android:id="@+id/tvTrim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{trim}"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvModel"
+            app:layout_constraintTop_toBottomOf="@+id/img_character"
+            tools:text="Character" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@{price}"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvCity"
+            app:layout_constraintEnd_toStartOf="@id/tvMileage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvYear"
+            tools:text="Character" />
+
+        <TextView
+            android:id="@+id/tvMileage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{mileage}"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvCity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvPrice"
+            app:layout_constraintTop_toBottomOf="@id/tvYear"
+            tools:text="Character"/>
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@{city}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvState"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            tools:text="Character" />
+
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{state}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvCity"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            tools:text="Character"/>
+
+        <Button
+            android:id="@+id/button_toast"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:onClick="showToast"
+            android:text="@string/button_label_toast"
+            android:textColor="@color/colorPrimary"
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCity" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
