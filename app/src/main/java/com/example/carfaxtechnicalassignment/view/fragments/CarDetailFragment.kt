@@ -43,7 +43,7 @@ class CarDetailFragment : Fragment() {
             Glide.with(requireContext()).load(data.images?.firstPhoto?.large).into(binding!!.img)
             binding!!.tvYear.text = data.year.toString() + " " + data.make + " " + data.model + " " + data.trim
             binding!!.tvPrice.text = "$ " + data.currentPrice.toString() + "  | " + data.mileage.toString() + "k mi"
-            binding!!.tvCity.text = "location: " + data.dealer?.city + ", " + data.dealer?.state
+            binding!!.tvCity.text = "Location: " + data.dealer?.city + ", " + data.dealer?.state
             binding!!.tvExteriorColor.text = "Exterior Color: " + data.exteriorColor
             binding!!.tvInteriorColor.text = "Interior Color: " + data.interiorColor
             binding!!.tvDriveType.text = "Drive Type: " + data.drivetype
