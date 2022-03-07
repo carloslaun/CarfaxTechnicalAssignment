@@ -3,11 +3,13 @@ package com.example.carfaxtechnicalassignment.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.carfaxtechnicalassignment.R
 import com.example.carfaxtechnicalassignment.databinding.ActivityMainBinding
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.database.ktx.database
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setContentView(binding.root)
+
+        //offline support
+        Firebase.database.setPersistenceEnabled(true)
 
 
     }

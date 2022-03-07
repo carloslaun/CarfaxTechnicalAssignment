@@ -41,14 +41,9 @@ class CarDetailFragment : Fragment() {
 
         viewModel.itemDataSelected?.let { data ->
             Glide.with(requireContext()).load(data.images?.firstPhoto?.large).into(binding!!.img)
-            binding!!.tvModel.text = data.model
-            binding!!.tvYear.text = data.year.toString()
-            binding!!.tvMake.text = data.make
-            binding!!.tvTrim.text = data.trim
-            binding!!.tvPrice.text = "$" + data.currentPrice.toString() + " |"
-            binding!!.tvMileage.text = data.mileage.toString() + "k mi"
-            binding!!.tvCity.text = "location: " + data.dealer?.city + ","
-            binding!!.tvState.text = data.dealer?.state
+            binding!!.tvYear.text = data.year.toString() + " " + data.make + " " + data.model + " " + data.trim
+            binding!!.tvPrice.text = "$ " + data.currentPrice.toString() + "  | " + data.mileage.toString() + "k mi"
+            binding!!.tvCity.text = "location: " + data.dealer?.city + ", " + data.dealer?.state
             binding!!.tvExteriorColor.text = "Exterior Color: " + data.exteriorColor
             binding!!.tvInteriorColor.text = "Interior Color: " + data.interiorColor
             binding!!.tvDriveType.text = "Drive Type: " + data.drivetype

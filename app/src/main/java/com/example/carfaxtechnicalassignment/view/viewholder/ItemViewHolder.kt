@@ -13,14 +13,9 @@ class ItemViewHolder(binding: CarRowBinding): RecyclerView.ViewHolder(binding.ro
     }
     fun setItem(model: ListingsItem) {
         binding?.let { view->
-            view.model = model.model
-            view.year = model.year.toString()
-            view.city = model.dealer?.city + ","
-            view.make = model.make
-            view.mileage = model.mileage.toString() + "k mi"
-            view.price = "$" + model.currentPrice.toString() + " |"
-            view.state = model.dealer?.state
-            view.trim = model.trim
+            view.year = " "+ model.year.toString() +" "+ model.make +" "+ model.model +" "+ model.trim
+            view.city = "  " + model.dealer?.city + ", " + model.dealer?.state
+            view.price = " $ " + model.currentPrice.toString() + "  | " + model.mileage.toString() + "k mi"
 
 
             Glide.with(view.root.context).load(model.images?.firstPhoto?.large).into(view.imgCharacter)

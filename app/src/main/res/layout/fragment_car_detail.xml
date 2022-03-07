@@ -40,57 +40,10 @@
             android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/tvPrice"
-            app:layout_constraintEnd_toStartOf="@id/tvMake"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img" />
 
-        <TextView
-            android:id="@+id/tvMake"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/hello_blank_fragment"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@id/tvPrice"
-            app:layout_constraintEnd_toStartOf="@id/tvModel"
-            app:layout_constraintStart_toEndOf="@id/tvYear"
-            app:layout_constraintTop_toBottomOf="@+id/img" />
-
-        <TextView
-            android:id="@+id/tvModel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/hello_blank_fragment"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@id/tvPrice"
-            app:layout_constraintEnd_toStartOf="@id/tvTrim"
-            app:layout_constraintStart_toEndOf="@id/tvMake"
-            app:layout_constraintTop_toBottomOf="@+id/img" />
-
-        <TextView
-            android:id="@+id/tvTrim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/hello_blank_fragment"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@id/tvPrice"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tvModel"
-            app:layout_constraintTop_toBottomOf="@+id/img" />
 
         <TextView
             android:id="@+id/tvPrice"
@@ -104,25 +57,10 @@
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@id/tvCity"
-            app:layout_constraintEnd_toStartOf="@id/tvMileage"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvYear" />
 
-        <TextView
-            android:id="@+id/tvMileage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/hello_blank_fragment"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/tvCity"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tvPrice"
-            app:layout_constraintTop_toBottomOf="@id/tvYear" />
 
         <TextView
             android:id="@+id/tvCity"
@@ -134,23 +72,10 @@
             android:textSize="16sp"
             android:layout_gravity="center_horizontal"
             app:layout_constraintBottom_toTopOf="@id/tvExteriorColor"
-            app:layout_constraintEnd_toStartOf="@id/tvState"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvPrice" />
 
-        <TextView
-            android:id="@+id/tvState"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/hello_blank_fragment"
-            android:textSize="16sp"
-            android:layout_gravity="center_horizontal"
-            app:layout_constraintBottom_toTopOf="@id/tvExteriorColor"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tvCity"
-            app:layout_constraintTop_toBottomOf="@id/tvPrice" />
         <TextView
             android:id="@+id/tvExteriorColor"
             android:layout_width="wrap_content"
